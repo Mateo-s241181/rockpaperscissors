@@ -41,25 +41,13 @@ func (g *Game) Play() {
 	//         Aufrufbeispiel: v1.Beats(v2)
 	//         Geben Sie dann je nach Ergebnis den Gewinner aus, erhöhen Sie den Punktestand,
 	//         geben Sie die Punktestände aus und rufen Sie ggf. die Funktion g.Play() erneut auf.
-	if v1.Beats(v2) {
-		fmt.Printf("%s gewinnt.\n", g.Player1.GetName())
-		g.Player1.IncrementScore()
-		g.PrintScores()
-	} else if v2.Beats(v1) {
-		fmt.Printf("%s gewinnt.\n", g.Player2.GetName())
-		g.Player2.IncrementScore()
-		g.PrintScores()
-	} else {
-		fmt.Println("Unentschieden, noch einmal.")
-		g.Play()
-	}
+
+	// TODO
 }
 
 // PrintScores gibt den Punktestand beider Spieler auf die Konsole aus.
 func (g Game) PrintScores() {
 	// Hinweis: Verwenden Sie fmt.Println() und fmt.Printf() um die Punktestände auszugeben.
-	fmt.Println("Punktestand:")
-	fmt.Printf("  %s: %d\n", g.Player1.GetName(), g.Player1.GetScore())
-	fmt.Printf("  %s: %d\n", g.Player2.GetName(), g.Player2.GetScore())
-	fmt.Println()
+
+	// TODO
 }
