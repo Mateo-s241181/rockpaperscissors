@@ -17,36 +17,29 @@ func NewHuman(n string) *Human {
 
 // GetName liefert den Namen des Spielers als String.
 func (p Human) GetName() string {
-	// hint: Greifen Sie mit p.Name auf den Namen des Spielers zu.
-	// solution:begin
+	// Hinweis: Greifen Sie mit p.Name auf den Namen des Spielers zu.
 	return p.Name
-	// solution:end
 }
 
 // GetScore liefert den Punktestand des Spielers.
 func (p Human) GetScore() int {
-	// hint: Greifen Sie mit p.Score auf den Punktestand des Spielers zu.
-	// solution:begin
+	// Hinweis: Greifen Sie mit p.Score auf den Punktestand des Spielers zu.
 	return p.Score
-	// solution:end
 }
 
 // IncrementScore erhöht den Punktestand des Spielers um eins.
 func (p *Human) IncrementScore() {
-	// hint: Greifen Sie mit p.Score auf den Punktestand des Spielers zu.
-	//       Sie können p.Score wie eine reguläre Variable verwenden.
-	// solution:begin
+	// Hinweis: Greifen Sie mit p.Score auf den Punktestand des Spielers zu.
+	//          Sie können p.Score wie eine reguläre Variable verwenden.
 	p.Score++
-	// solution:end
 }
 
 // GetMove liefert einen Zug des Spielers.
 func (p Human) GetMove() values.Value {
-	// hint: Fordern Sie den Spieler mit fmt.Printf() auf, einen Zug zu wählen.
-	//       Geben Sie dem Spieler die Optionen "Stein", "Papier" und "Schere".
-	//       Die Optionen können z.B. mit Zahlen 1, 2 und 3 verknüpft werden.
-	//       Verwenden Sie fmt.Scanln() um die Eingabe des Spielers zu lesen.
-	// solution:begin
+	// Hinweis: Fordern Sie den Spieler mit fmt.Printf() auf, einen Zug zu wählen.
+	//          Geben Sie dem Spieler die Optionen "Stein", "Papier" und "Schere".
+	//          Die Optionen können z.B. mit Zahlen 1, 2 und 3 verknüpft werden.
+	//          Verwenden Sie fmt.Scanln() um die Eingabe des Spielers zu lesen.
 	fmt.Printf("%s, was wählst du?\n", p.GetName())
 	fmt.Println("  1: Stein")
 	fmt.Println("  2: Papier")
@@ -54,5 +47,4 @@ func (p Human) GetMove() values.Value {
 	var v int
 	fmt.Scanln(&v)
 	return values.Value((v - 1) % 3)
-	// solution:end
 }

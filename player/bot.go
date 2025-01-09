@@ -17,34 +17,26 @@ func NewBot(n string) *Bot {
 
 // GetName liefert den Namen des Spielers als String.
 func (p Bot) GetName() string {
-	// hint: Greifen Sie mit p.Name auf den Namen des Spielers zu.
-	// solution:begin
+	// Hinweis: Greifen Sie mit p.Name auf den Namen des Spielers zu.
 	return p.Name
-	// solution:end
 }
 
 // GetScore liefert den Punktestand des Spielers.
 func (p Bot) GetScore() int {
-	// hint: Greifen Sie mit p.Score auf den Punktestand des Spielers zu.
-	// solution:begin
+	// Hinweis: Greifen Sie mit p.Score auf den Punktestand des Spielers zu.
 	return p.Score
-	// solution:end
 }
 
 // IncrementScore erhöht den Punktestand des Spielers um eins.
 func (p *Bot) IncrementScore() {
-	// hint: Greifen Sie mit p.Score auf den Punktestand des Spielers zu.
-	//       Sie können p.Score wie eine reguläre Variable verwenden.
-	// solution:begin
+	// Hinweis: Greifen Sie mit p.Score auf den Punktestand des Spielers zu.
+	//          Sie können p.Score wie eine reguläre Variable verwenden.
 	p.Score++
-	// solution:end
 }
 
 // GetMove liefert einen Zug des Spielers.
 func (p Bot) GetMove() values.Value {
-	// hint: Verwenden Sie die Funktion rand.Intn(3) um eine Zufallszahl zwischen 0 und 2 zu erzeugen.
-	//       Verwenden Sie dann values.Value() um die Zufallszahl in einen Wert umzuwandeln.
-	// solution:begin
+	// Hinweis: Verwenden Sie die Funktion rand.Intn(3) um eine Zufallszahl zwischen 0 und 2 zu erzeugen.
+	//          Verwenden Sie dann values.Value() um die Zufallszahl in einen Wert umzuwandeln.
 	return values.Value(rand.Intn(3))
-	// solution:end
 }
