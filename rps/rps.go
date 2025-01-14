@@ -25,7 +25,21 @@ func main() {
 		fmt.Println("Einzelspielerspiel")
 	}
 
-	for i := 0; i < 10; i++ {
-		g.Play()
+	for i := 0; i < 4; i++ {
+		g.Play(i + 1)
 	}
+
+	fmt.Printf("\n\n------------------------------------------\n")
+
+	if g.Player1.GetScore() > g.Player2.GetScore() {
+		fmt.Printf("%v hat das Spiel gewonnen!", g.Player1.GetName())
+	}
+	if g.Player2.GetScore() > g.Player1.GetScore() {
+		fmt.Printf("%v hat das Spiel gewonnen!", g.Player2.GetName())
+	}
+	if g.Player2.GetScore() == g.Player1.GetScore() {
+		fmt.Printf("Das Spielergebnis ist ein Unentschieden...")
+	}
+
+	fmt.Printf("\n------------------------------------------")
 }
