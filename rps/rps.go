@@ -25,7 +25,7 @@ func main() {
 		fmt.Println("Einzelspielerspiel")
 	}
 
-	for i := 0; i < 4; i++ {
+	for i := 0; i < 10; i++ {
 		g.Play(i + 1)
 	}
 
